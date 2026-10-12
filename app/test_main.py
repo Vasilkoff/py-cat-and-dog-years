@@ -8,25 +8,42 @@ class TestParseFirstYears:
         "animal_years, result",
         [
             pytest.param(
+                [0, 0],
+                [0, 0],
+                id="test_zero_years"
+
+            ),
+            pytest.param(
                 [14, 14],
                 [0, 0],
-                id="test_first_14_years_for_0_year"
+                id="last_year_before_first_human_year"
 
             ),
             pytest.param(
                 [15, 15],
                 [1, 1],
-                id="test_first_15_years_for_0_year"
+                id="test_first_human_year_starts_at_15"
+            ),
+            pytest.param(
+                [23, 23],
+                [1, 1],
+                id="test_last_year_before_second_human_year"
+
             ),
             pytest.param(
                 [24, 24],
                 [2, 2],
-                id="test_next_9_years_for_1_year"
+                id="test_second_human_year_starts_at_24"
             ),
             pytest.param(
-                [28, 29],
+                [27, 27],
+                [2, 2],
+                id="test_last_year_before_cat_third_human_year"
+            ),
+            pytest.param(
+                [28, 28],
                 [3, 3],
-                id="test_next_9_years_for_1_year"
+                id="test_cat_gets_third_year_dog_does_not"
             ),
             pytest.param(
                 [100, 100],
