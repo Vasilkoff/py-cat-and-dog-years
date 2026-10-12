@@ -42,7 +42,7 @@ class TestParseFirstYears:
             ),
             pytest.param(
                 [28, 28],
-                [3, 3],
+                [3, 2],
                 id="test_cat_gets_third_year_dog_does_not"
             ),
             pytest.param(
